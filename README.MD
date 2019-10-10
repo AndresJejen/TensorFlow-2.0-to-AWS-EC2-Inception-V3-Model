@@ -6,10 +6,25 @@ follow all these steps and enjoy tensorflow.
 
 ## Instructions
 
-- 1. You must have installed virtual env and Python3
+- 1. You must have installed ```virtualenv``` and ```Python3```  
+        I´m using Ubuntu 18 on Windows Subsystem Linux.   
+        clone this repo (I´m working on my disk partition D on WSL)  
+        ```
+        cd /mnt/d
+        ```
+        ```
+        git clone https://github.com/AndresJejen/TensorFlow-2.0-to-AWS-EC2-Inception-V3-Model.git
+        ```
+        ```
+        cd TensorFlow-2.0-to-AWS-EC2-Inception-V3-Model
+        ```
 - 2. run this code on root project folder to create the virtual environment
     ```
         virtualenv env --python=python3
+    ```  
+    and activate the virtual env
+    ```
+        source env/bin/activate
     ```
 - 3. Install al dependencies
     ```
@@ -21,7 +36,7 @@ follow all these steps and enjoy tensorflow.
     ```
 - 5. run the Server with Docker (You must install docker)
     ```
-        docker run -t --rm -p 8501:8501 -v $(pwd)\modelTF:/models/ImageClassifier --name "Test" -e MODEL_NAME=ImageClassifier tensorflow/serving
+        docker run -t --rm -p 8501:8501 -v mnt/d/TensorFlow-2.0-to-AWS-EC2-Inception-V3-Model/modelTF:/models/ImageClassifier --name "Test" -e MODEL_NAME=ImageClassifier tensorflow/serving
     ```
 - 6. create your own querys
     ```
@@ -36,7 +51,13 @@ follow all these steps and enjoy tensorflow.
 - 4. Start your server
 - 5. Query from your own pc
 
+## AWESOME LINKS
+https://www.tensorflow.org/tfx/serving/setup
+https://towardsdatascience.com/deploying-keras-models-using-tensorflow-serving-and-flask-508ba00f1037
+https://github.com/Hvass-Labs/TensorFlow-Tutorials/blob/master/01_Simple_Linear_Model.ipynb
+
 ## Thanks
+If you like please clap the Medium Article. Share and let´s learn together.
 
 ## Colombia AI
 
