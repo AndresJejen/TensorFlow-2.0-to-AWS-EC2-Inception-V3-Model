@@ -52,9 +52,9 @@ follow all these steps and enjoy tensorflow.
 - 5. Query from your own pc
 
 ## AWESOME LINKS
-https://www.tensorflow.org/tfx/serving/setup
-https://towardsdatascience.com/deploying-keras-models-using-tensorflow-serving-and-flask-508ba00f1037
-https://github.com/Hvass-Labs/TensorFlow-Tutorials/blob/master/01_Simple_Linear_Model.ipynb
+- https://www.tensorflow.org/tfx/serving/setup
+- https://towardsdatascience.com/deploying-keras-models-using-tensorflow-serving-and-flask-508ba00f1037
+- https://github.com/Hvass-Labs/TensorFlow-Tutorials/blob/master/01_Simple_Linear_Model.ipynb
 
 ## Thanks
 If you like please clap the Medium Article. Share and let´s learn together.
