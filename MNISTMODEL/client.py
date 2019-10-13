@@ -20,7 +20,7 @@ data = {"instances": data.tolist()}
 headers = {"content-type": "application/json"}
 
 # sending post request to TensorFlow Serving server
-r = requests.post('http://ec2-34-214-205-148.us-west-2.compute.amazonaws.com/v1/models/MNIST:predict', json=data, headers=headers)
+r = requests.post('http://<YOUR AWS EC2 ROUTE>/v1/models/MNIST:predict', json=data, headers=headers)
 pred = json.loads(r.content.decode())
 print(r)
 print(pred)

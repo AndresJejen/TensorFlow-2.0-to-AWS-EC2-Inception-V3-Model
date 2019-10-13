@@ -26,7 +26,7 @@ print(type(img.tolist()))
 headers = {"content-type": "application/json"}
 
 # sending post request to TensorFlow Serving server
-r = requests.post('http://ec2-34-214-205-148.us-west-2.compute.amazonaws.com:8080/v1/models/INCEPTION:predict', json=data, headers=headers)
+r = requests.post('http://<YOUR AWS EC2 ROUTE>:8080/v1/models/INCEPTION:predict', json=data, headers=headers)
 print(r)
 predictions = json.loads(r.content.decode('utf-8'))["predictions"]
 
