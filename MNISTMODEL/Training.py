@@ -7,7 +7,7 @@ from model import create_model
 
 print("Tensorflow Version:", tf.__version__)
 
-print("Downloading Model 📲")
+print("Downloading Data 📲")
 mnist = tf.keras.datasets.mnist
 
 (x_train, y_train), (x_test, y_test) = mnist.load_data()

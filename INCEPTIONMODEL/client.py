@@ -26,11 +26,14 @@ print(type(img.tolist()))
 headers = {"content-type": "application/json"}
 
 # sending post request to TensorFlow Serving server
-r = requests.post('http://localhost:8501/v1/models/ImageClassifier:predict', json=data, headers=headers)
+r = requests.post('http://ec2-34-214-205-148.us-west-2.compute.amazonaws.com:8080/v1/models/INCEPTION:predict', json=data, headers=headers)
 print(r)
 predictions = json.loads(r.content.decode('utf-8'))["predictions"]
 
 # Decoding the response
 # decode_predictions(preds, top=5) by default gives top 5 results
 # You can pass "top=10" to get top 10 predicitons
-print(json.dumps(inception_v3.decode_predictions(np.array(predictions))[0]))
+resultados = inception_v3.decode_predictions(np.array(predictions))[0]
+
+for i in resultados:
+    print("Objeto predicho",i[1]," con una probabilidad de",i[2])
